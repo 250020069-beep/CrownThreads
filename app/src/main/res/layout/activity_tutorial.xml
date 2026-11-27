@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF7F9"
+    android:padding="20dp">
+
+    <!-- Barra Superior: Título y Botón Saltar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_tutorial_step_indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Paso 1 de 4"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#D96B93" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_skip_tutorial"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Saltar"
+            android:textColor="#8C5C6F"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Barra de Progreso Pastel -->
+    <ProgressBar
+        android:id="@+id/progress_tutorial"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="4"
+        android:progress="1"
+        android:progressTint="#E884A7"
+        android:progressBackgroundTint="#FAD2E1"
+        android:layout_marginBottom="24dp" />
+
+    <!-- ======================================================== -->
+    <!-- TARJETA CENTRAL INTERACTIVA DEL TUTORIAL                 -->
+    <!-- ======================================================== -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_tutorial_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeColor="#FAD2E1"
+        app:strokeWidth="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <!-- Círculo decorativo con Emoji/Ícono del paso -->
+            <TextView
+                android:id="@+id/tv_tutorial_icon"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:text="👑"
+                android:textSize="44sp"
+                android:gravity="center"
+                android:background="#FCEBF1"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Placeholder de imagen para ilustrar el paso -->
+            <ImageView
+                android:id="@+id/img_tutorial_illustration"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="Ilustración del paso"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Título del Paso -->
+            <TextView
+                android:id="@+id/tv_tutorial_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Bienvenida al Palacio"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#5E3A47"
+                android:gravity="center"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Descripción detallada -->
+            <TextView
+                android:id="@+id/tv_tutorial_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En Crown &amp; Threads tienes total libertad creativa. Sin niveles ni relojes: diseña atuendos reales a tu propio ritmo."
+                android:textSize="14sp"
+                android:textColor="#8C5C6F"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ======================================================== -->
+    <!-- CONTROLES DE NAVEGACIÓN INFERIOR (ANTERIOR / SIGUIENTE)  -->
+    <!-- ======================================================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_prev_step"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="ANTERIOR"
+            android:textColor="#5E3A47"
+            android:textStyle="bold"
+            android:enabled="false"
+            app:backgroundTint="#F7D6E0"
+            app:cornerRadius="26dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next_step"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="SIGUIENTE"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#E884A7"
+            app:cornerRadius="26dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

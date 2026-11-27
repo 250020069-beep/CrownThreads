@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF7F9"
+    android:padding="20dp">
+
+    <!-- Título de la Galería -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌸 Galería de Atuendos 🌸"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#D96B93"
+        android:gravity="center"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tv_galeria_contador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0 diseños guardados en el palacio"
+        android:textSize="13sp"
+        android:textColor="#8C5C6F"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Mensaje cuando no hay atuendos guardados aún -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_galeria_vacia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FCEBF1"
+        app:strokeColor="#FAD2E1"
+        app:strokeWidth="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👗"
+                android:textSize="40sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tu galería aún está vacía"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#5E3A47"
+                android:gravity="center"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entra a PLAY, diseña un atuendo para tu modelo favorita y guárdalo para verlo aquí."
+                android:textSize="12sp"
+                android:textColor="#8C5C6F"
+                android:gravity="center" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Lista Desplazable de Atuendos desde SQLite -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/contenedor_lista_galeria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Botón Volver al Inicio (52dp de altura táctil) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_volver_galeria"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="VOLVER AL INICIO"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="#E884A7"
+        app:cornerRadius="26dp" />
+
+</LinearLayout>

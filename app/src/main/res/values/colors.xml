@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sakura_bg">#FFF5F7</color>
+    <color name="sakura_pink_light">#FCCDDC</color>
+    <color name="sakura_pink_accent">#F378A3</color>
+    <color name="sakura_pink_dark">#E84A83</color>
+    <color name="sakura_dark">#4A1C2C</color>
+    <color name="sakura_gold">#E5C158</color>
+</resources>
